@@ -12,7 +12,8 @@ describe "GET /api/v1/antipodes" do
           "id",
           "search_city",
           "antipode_city",
-          "forecast"
+          "current_status",
+          "current_temp"
       ]
       expect(data["data"]["attributes"].keys).to eq(keys)
     end

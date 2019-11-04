@@ -4,6 +4,7 @@ class AntipodeSerializer
   attributes  :id,
               :search_city,
               :antipode_city,
-              :forecast
+              :current_status,
+              :current_temp
 
 end
