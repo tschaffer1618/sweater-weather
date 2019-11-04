@@ -43,6 +43,11 @@ group :development, :test do
   gem 'capybara'
 end
 
+group :test do
+  gem 'webmock'
+  gem 'vcr'
+end
+
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
