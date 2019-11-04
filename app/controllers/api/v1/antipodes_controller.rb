@@ -18,7 +18,11 @@ class Api::V1::AntipodesController < ApplicationController
       address = GoogleService.new(antipode_location).address
       antipode_location.update(address: address)
     end
+
     #find current weather for antipode city using coords from step 2
+    forecast_hash = DarkSkyService.new(antipode_location).get_json_forecast
+    forecast = Forecast.new(forecast_hash, antipode_location.address)
+    
     #return json with search city, antipode city, and antipode city forecast
   end
 
