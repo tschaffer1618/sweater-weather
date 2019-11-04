@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.unsplash.com/photos/random?client_id=<UNSPLASH_API_KEY>&query=denver,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2978'
+      Server:
+      - Cowboy
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining
+      Content-Type:
+      - application/json
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Remaining:
+      - '48'
+      X-Request-Id:
+      - 299435f9-bdfc-4f24-87ec-3c3b9397bce3
+      X-Runtime:
+      - '0.035860'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Via:
+      - 1.1 varnish
+      - 1.1 varnish
+      - 1.1 vegur
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Mon, 04 Nov 2019 05:17:28 GMT
+      Age:
+      - '0'
+      X-Served-By:
+      - cache-iad2132-IAD, cache-den19620-DEN
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1572844649.867535,VS0,VE88
+      Vary:
+      - Origin, Authorization
+    body:
+      encoding: UTF-8
+      string: '{"id":"tNPjAq2ltTQ","created_at":"2019-09-15T21:42:05-04:00","updated_at":"2019-10-28T01:02:50-04:00","promoted_at":null,"width":2832,"height":4240,"color":"#1E2328","description":"Happy
+        sunflower near Denver airport","alt_description":"photo of sunflower","urls":{"raw":"https://images.unsplash.com/photo-1568598034635-a081a21d1561?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjk5NDc2fQ","full":"https://images.unsplash.com/photo-1568598034635-a081a21d1561?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjk5NDc2fQ","regular":"https://images.unsplash.com/photo-1568598034635-a081a21d1561?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjk5NDc2fQ","small":"https://images.unsplash.com/photo-1568598034635-a081a21d1561?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjk5NDc2fQ","thumb":"https://images.unsplash.com/photo-1568598034635-a081a21d1561?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjk5NDc2fQ"},"links":{"self":"https://api.unsplash.com/photos/tNPjAq2ltTQ","html":"https://unsplash.com/photos/tNPjAq2ltTQ","download":"https://unsplash.com/photos/tNPjAq2ltTQ/download","download_location":"https://api.unsplash.com/photos/tNPjAq2ltTQ/download"},"categories":[],"likes":4,"liked_by_user":false,"current_user_collections":[],"user":{"id":"17T2WlovpRw","updated_at":"2019-11-02T04:12:41-04:00","username":"freetousesoundscom","name":"Free
+        To Use Sounds","first_name":"Free To","last_name":"Use Sounds","twitter_username":"freetousesounds","portfolio_url":null,"bio":null,"location":"Los
+        Angeles","links":{"self":"https://api.unsplash.com/users/freetousesoundscom","html":"https://unsplash.com/@freetousesoundscom","photos":"https://api.unsplash.com/users/freetousesoundscom/photos","likes":"https://api.unsplash.com/users/freetousesoundscom/likes","portfolio":"https://api.unsplash.com/users/freetousesoundscom/portfolio","following":"https://api.unsplash.com/users/freetousesoundscom/following","followers":"https://api.unsplash.com/users/freetousesoundscom/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-fb-1554974349-aff6804d100a.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32","medium":"https://images.unsplash.com/profile-fb-1554974349-aff6804d100a.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64","large":"https://images.unsplash.com/profile-fb-1554974349-aff6804d100a.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128"},"instagram_username":"freetousesounds","total_collections":0,"total_likes":3,"total_photos":257,"accepted_tos":true},"exif":{"make":"SONY","model":"ILCE-7S","exposure_time":"1/3200","aperture":"2","focal_length":"28.0","iso":100},"location":{"title":"Denver,
+        CO, USA","name":"Denver, CO, USA","city":"Denver","country":"United States","position":{"latitude":39.7392358,"longitude":-104.990251}},"views":47784,"downloads":172}'
+    http_version: 
+  recorded_at: Mon, 04 Nov 2019 05:17:28 GMT
+recorded_with: VCR 5.0.0
