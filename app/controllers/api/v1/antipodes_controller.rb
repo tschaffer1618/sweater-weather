@@ -22,8 +22,12 @@ class Api::V1::AntipodesController < ApplicationController
     #find current weather for antipode city using coords from step 2
     forecast_hash = DarkSkyService.new(antipode_location).get_json_forecast
     forecast = Forecast.new(forecast_hash, antipode_location.address)
-    
+
     #return json with search city, antipode city, and antipode city forecast
+    antipode = Antipode.new(search_location.address, antipode_location.address, forecast)
+    antipode_json = AntipodeSerializer.new(antipode)
+    render json: antipode_json
+
   end
 
 end
