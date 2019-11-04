@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.unsplash.com/photos/random?client_id=<UNSPLASH_API_KEY>&query=Denver,CO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3105'
+      Server:
+      - Cowboy
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining
+      Content-Type:
+      - application/json
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Remaining:
+      - '49'
+      X-Request-Id:
+      - d979a5ff-90d5-45e6-844a-040b3fcc4166
+      X-Runtime:
+      - '0.035453'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Via:
+      - 1.1 varnish
+      - 1.1 varnish
+      - 1.1 vegur
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Mon, 04 Nov 2019 05:14:18 GMT
+      Age:
+      - '0'
+      X-Served-By:
+      - cache-iad2145-IAD, cache-den19622-DEN
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1572844458.162918,VS0,VE84
+      Vary:
+      - Origin, Authorization
+    body:
+      encoding: UTF-8
+      string: '{"id":"c0TP4hocVG0","created_at":"2018-05-26T22:52:40-04:00","updated_at":"2019-10-28T01:08:09-04:00","promoted_at":"2018-05-27T06:20:58-04:00","width":4697,"height":3111,"color":"#FCC29D","description":"This
+        was the view I got to witness on my way from Wisconsin to Denver. Shortly
+        after a rainstorm the sun came out and showed off for little bit, giving off
+        nothing but warm, golden colors.","alt_description":"grass field taken during
+        golden hour","urls":{"raw":"https://images.unsplash.com/photo-1527389223582-75aa810beceb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjk5NDc2fQ","full":"https://images.unsplash.com/photo-1527389223582-75aa810beceb?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjk5NDc2fQ","regular":"https://images.unsplash.com/photo-1527389223582-75aa810beceb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjk5NDc2fQ","small":"https://images.unsplash.com/photo-1527389223582-75aa810beceb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjk5NDc2fQ","thumb":"https://images.unsplash.com/photo-1527389223582-75aa810beceb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjk5NDc2fQ"},"links":{"self":"https://api.unsplash.com/photos/c0TP4hocVG0","html":"https://unsplash.com/photos/c0TP4hocVG0","download":"https://unsplash.com/photos/c0TP4hocVG0/download","download_location":"https://api.unsplash.com/photos/c0TP4hocVG0/download"},"categories":[],"likes":24,"liked_by_user":false,"current_user_collections":[],"user":{"id":"3q0qTAibyZ4","updated_at":"2019-11-03T01:07:09-04:00","username":"luddyphoto","name":"Lucas
+        Ludwig","first_name":"Lucas","last_name":"Ludwig","twitter_username":null,"portfolio_url":null,"bio":null,"location":"wisconsin","links":{"self":"https://api.unsplash.com/users/luddyphoto","html":"https://unsplash.com/@luddyphoto","photos":"https://api.unsplash.com/users/luddyphoto/photos","likes":"https://api.unsplash.com/users/luddyphoto/likes","portfolio":"https://api.unsplash.com/users/luddyphoto/portfolio","following":"https://api.unsplash.com/users/luddyphoto/following","followers":"https://api.unsplash.com/users/luddyphoto/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1512334620583-b8b04da9c2d5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32","medium":"https://images.unsplash.com/profile-1512334620583-b8b04da9c2d5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64","large":"https://images.unsplash.com/profile-1512334620583-b8b04da9c2d5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128"},"instagram_username":"luddy.photography","total_collections":1,"total_likes":23,"total_photos":148,"accepted_tos":true},"exif":{"make":"NIKON
+        CORPORATION","model":"NIKON D5100","exposure_time":"1/500","aperture":"5.6","focal_length":"55.0","iso":160},"location":{"title":"Denver,
+        United States","name":"Denver, United States","city":"Denver","country":"United
+        States","position":{"latitude":39.7392358,"longitude":-104.990251}},"views":625295,"downloads":1568}'
+    http_version: 
+  recorded_at: Mon, 04 Nov 2019 05:14:18 GMT
+recorded_with: VCR 5.0.0
