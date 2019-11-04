@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe DarkSkyService do
   before(:each) do
-    @coordinates = {lat: 39.7392358, lng: -104.990251}
-    @dark_sky_service = DarkSkyService.new(@coordinates)
+    @location = Location.create(address: "Denver,CO", latitude: 39.7392358, longitude: -104.990251)
+    @dark_sky_service = DarkSkyService.new(@location)
   end
 
   it "exists" do
