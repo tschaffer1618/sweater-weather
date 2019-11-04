@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_04_033808) do
+ActiveRecord::Schema.define(version: 2019_11_04_040034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "background_images", force: :cascade do |t|
+    t.bigint "location_id"
+    t.string "description"
+    t.string "alt_description"
+    t.string "raw_url"
+    t.string "full_url"
+    t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_background_images_on_location_id"
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string "address"
@@ -23,4 +35,5 @@ ActiveRecord::Schema.define(version: 2019_11_04_033808) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "background_images", "locations"
 end
