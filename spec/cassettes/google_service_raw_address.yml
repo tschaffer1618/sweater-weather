@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?key=<GOOGLE_API_KEY>&latlng=35.675,-47.893
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 04 Nov 2019 17:22:34 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=157
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q049=":443"; ma=2592000,h3-Q048=":443";
+        ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "plus_code" : {
+              "global_code" : "887JM4F4+XQ"
+           },
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Atlantic Ocean",
+                       "short_name" : "Atlantic Ocean",
+                       "types" : [ "establishment", "natural_feature" ]
+                    }
+                 ],
+                 "formatted_address" : "Atlantic Ocean",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 68.1962901,
+                          "lng" : 19.9970779
+                       },
+                       "southwest" : {
+                          "lat" : -75.9725902,
+                          "lng" : -82.9931606
+                       }
+                    },
+                    "location" : {
+                       "lat" : -14.5994134,
+                       "lng" : -28.6731465
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 68.1962901,
+                          "lng" : 19.9970779
+                       },
+                       "southwest" : {
+                          "lat" : -75.9725902,
+                          "lng" : -82.9931606
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ_7hu48qBWgYRT1MQ81ciNKY",
+                 "types" : [ "establishment", "natural_feature" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Mon, 04 Nov 2019 17:22:35 GMT
+recorded_with: VCR 5.0.0
