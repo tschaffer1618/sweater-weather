@@ -4,6 +4,12 @@ class Api::V1::SessionsController < ApplicationController
     email = info["email"]
     password = info["password"]
     user = User.find_by(email: email)
+    render_proper_json(user, password)
+  end
+
+  private
+
+  def render_proper_json(user, password)
     if user && user.authenticate(password)
       session[:user_id] = user.id
       render json: {api_key: user.api_key}, status: 200

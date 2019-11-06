@@ -1,6 +1,12 @@
 class Api::V1::UsersController < ApplicationController
   def create
     user = User.new(JSON.parse(request.body.read))
+    render_proper_json(user)
+  end
+
+  private 
+
+  def render_proper_json(user)
     if user.save
       key = SecureRandom.hex(27)
       user.update(api_key: key)
