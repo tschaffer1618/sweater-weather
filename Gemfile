@@ -41,6 +41,7 @@ group :development, :test do
   gem 'faker'
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'simplecov'
 end
 
 group :test do
