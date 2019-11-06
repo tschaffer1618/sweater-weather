@@ -6,11 +6,7 @@ class Api::V1::RoadTripsController < ApplicationController
     api_key = info["api_key"]
     user = User.find_by(api_key: api_key)
     if user
-      destination_location = Location.find_or_create_by(address: destination.downcase)
-      unless destination_location.latitude
-        coordinates = GoogleService.new.address_coordinates(destination)
-        destination_location.update(latitude: coordinates[:lat], longitude: coordinates[:lng])
-      end
+      destination_location = find_or_create_location(destination)
       travel_time = GoogleService.new.road_trip_time(origin, destination)
       service = DarkSkyService.new(destination_location)
       forecast_basics = service.future_hour_summary(travel_time)
