@@ -9,6 +9,12 @@ class DarkSkyService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def future_hour_summary(number)
+    full_forecast = get_json_forecast
+    hour = full_forecast[:hourly][:data][number]
+    [hour[:summary], hour[:temperature]]
+  end
+
   private
 
   def conn
