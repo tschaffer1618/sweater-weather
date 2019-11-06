@@ -25,4 +25,21 @@ describe GoogleService do
       expect(coordinates[:lng]).to eq -104.990251
     end
   end
+
+  it "#get_json_directions"do
+    VCR.use_cassette("google_service_directions_raw") do
+      origin = "Pueblo, CO"
+      json_response = @google_service.get_json_directions(origin, @city)
+      expect(json_response[:status]).to eq "OK"
+      expect(json_response[:routes][0][:legs][0][:duration][:text]).to eq "1 hour 49 mins"
+    end
+  end
+
+  it "#road_trip_time" do
+    VCR.use_cassette("google_service_travel_time") do
+      origin = "Pueblo, CO"
+      travel_time = @google_service.road_trip_time(origin, @city)
+      expect(travel_time).to eq 2
+    end
+  end
 end
